@@ -25,14 +25,14 @@ class _WebPageState extends State<WebPage> {
           onPageFinished: (String url) {},
           onWebResourceError: (WebResourceError error) {},
           onNavigationRequest: (NavigationRequest request) {
-            if (request.url.startsWith('https://www.youtube.com/')) {
+            if (request.url.startsWith('https://www.tesla.com/')) {
               return NavigationDecision.prevent;
             }
             return NavigationDecision.navigate;
           },
         ),
       )
-      ..loadRequest(Uri.parse('https://kun.uz'));
+      ..loadRequest(Uri.parse('https://www.tesla.com/'));
     super.initState();
   }
 

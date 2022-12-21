@@ -9,14 +9,14 @@ class TransactionViewModel extends ChangeNotifier {
     fetchTransaction();
   }
 
-  TransactionModel? transactionModel;
+  List<TransactionModel>? transactionModel;
   String errorForUI = "";
 
   fetchTransaction() async {
     MyResponse myResponse = await transactionRepositpry.getMyTransaction();
 
     if (myResponse.error.isEmpty) {
-      transactionModel = myResponse.data as TransactionModel;
+      transactionModel = myResponse.data as List<TransactionModel>;
     } else {
       errorForUI = myResponse.error;
     }

@@ -6,7 +6,7 @@ class DataModel {
   int expenseId;
   double amount;
   int cardId;
-  ReciveModel reciver;
+  ReciveModel receiver;
 
   DataModel({
     required this.transactionCode,
@@ -14,7 +14,7 @@ class DataModel {
     required this.expenseId,
     required this.amount,
     required this.cardId,
-    required this.reciver,
+    required this.receiver,
   });
 
   factory DataModel.fromJson(Map<String, dynamic> jsonData) {
@@ -24,7 +24,7 @@ class DataModel {
       expenseId: jsonData['expense_id'] as int? ?? 0,
       amount: jsonData['amount'] as double? ?? 0.0,
       cardId: jsonData['card_id'] as int? ?? 0,
-      reciver: ReciveModel.fromJson(jsonData['reciver']),
+      receiver: ReciveModel.fromJson(jsonData['receiver']),
     );
   }
 }

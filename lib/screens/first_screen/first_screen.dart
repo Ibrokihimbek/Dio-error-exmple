@@ -38,7 +38,7 @@ class FirstPage extends StatelessWidget {
                 color: Colors.white,
                 child: ListView.builder(
                   physics: const BouncingScrollPhysics(),
-                  itemCount: datalist!.data.length,
+                  itemCount: datalist!.length,
                   itemBuilder: (context, index) {
                     return Padding(
                       padding:
@@ -59,7 +59,7 @@ class FirstPage extends StatelessWidget {
                                 height: 100,
                                 width: 100,
                                 child: Image.network(
-                                  datalist.data[index].reciver.brandImage
+                                  datalist[index].data[index].receiver.brandImage
                                       .toString(),
                                   height: 20,
                                   width: 20,
@@ -69,7 +69,7 @@ class FirstPage extends StatelessWidget {
                               SizedBox(
                                 width: 200,
                                 child: Text(
-                                  datalist.data[index].reciver.name,
+                                  datalist[index].data[index].receiver.name,
                                   style: const TextStyle(
                                     color: Colors.blue,
                                     fontSize: 22,
